@@ -26,5 +26,14 @@
     <ClInclude Include="QSort.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="MatrixInCpp.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CaesarCipher.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Censorship.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

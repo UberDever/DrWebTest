@@ -1,11 +1,6 @@
 #pragma once
 #include "QSort.h"
 
-int comp(const void* a, const void* b)
-{
-	return *(int*)a - *(int*)b;
-}
-
 static int** alloc_matrix(int m, int n)
 {
 	int** matrix = NULL;
@@ -53,11 +48,11 @@ static int** alloc_matrix(int m, int n)
 
 /// <summary>
 /// generate_matrix() - Generates sorted matrix from given and returns pointer to it.
+/// Sorting is performed first by columns, then by rows
 /// </summary>
 /// <param name="matrix">Matrix to be sorted</param>
 /// <param name="m">Count of row elements in matrix (also count of columns)</param>
 /// <param name="n">Count of column elements in matrix (also count of rows)</param>
-/// <returns></returns>
 static int** generate_matrix(const int** matrix, size_t m, size_t n)
 {
 	if (matrix == NULL)
@@ -77,11 +72,15 @@ static int** generate_matrix(const int** matrix, size_t m, size_t n)
 		matrix_out[i] = matrix_flat + offset;
 		memcpy(matrix_flat + offset, matrix[i], sizeof(int) * n);
 	}
-	//memcpy(matrix_out, matrix, sizeof(int) * m * n);
+
+	for (int i = 0; i < n; i++)
+	{
+		qsort_3way(matrix_flat + i, m, cmpDescending, n);
+	}
 
 	for (int i = 0; i < m; i++)
 	{
-		qsort_3way(matrix_out[i], n, cmpDescending);
+		qsort_3way(matrix_out[i], n, cmpDescending, 1);
 	}
 
 	return matrix_out;
