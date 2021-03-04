@@ -3,7 +3,7 @@ Dr.Web test assignment
 
 Results of third exercise benchmarking:
 
-![Benchmark](https://github.com/UberDever/DrWebTest/Benchmarks.jpeg)
+![Benchmark](https://github.com/UberDever/DrWebTest/blob/master/Benchmarks.jpg)
 
 ## Tasks
 
