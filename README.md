@@ -1,6 +1,12 @@
 # DrWebTest
 Dr.Web test assignment
 
+Results of third exercise benchmarking:
+
+![Benchmark](https://github.com/UberDever/DrWebTest/Benchmarks.jpeg)
+
+## Tasks
+
 1) Матрица (C)
 Нужно реализовать функцию на C, на вход которой подается матрица M x N.
 
